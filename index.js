@@ -5,13 +5,13 @@
 // Функция delay(ms) должна возвращать промис, который перейдёт в состояние «выполнен» через ms миллисекунд,
 // так чтобы мы могли добавить к нему .then:
 
-// function delay(ms) {
-//   return new Promise((resolve, reject) => {
-//     setTimeout(() => resolve("выполнилось через 3 секунды"), ms);
-//   });
-// }
+function delay(ms) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => resolve(), ms);
+  });
+}
 
-// delay(3000).then((message) => alert(message));
+delay(3000).then(() => alert("выполнилось через 3 секунды"));
 
 // Task 2
 
